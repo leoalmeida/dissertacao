@@ -1,0 +1,27 @@
+
+\chapter{Conclusão}
+
+Durante o desenvolvimento desta pesquisa, notou-se a import\^{a}ncia de utilizar uma RSSF para coletar informa\c{c}\~{o}es do consumo de energia el\'{e}trica em uma resid\^{e}ncia. Nesse cen\'{a}rio, observou-se a necessidade de usar t\'{e}cnicas de detec\c{c}\~{a}o de novidades no consumo de energia para os equipamentos eletr\^{o}nicos. Nesse sentido foi proposto o NodePM, um algoritmo que considera a entropia da cadeia de Markov com o aux\'{i}lio do KNN para detectar novidades. Objetivando comprovar a viabilidade do NodePM em um ambiente real, desenvolveu-se uma plataforma de monitoramento remoto do consumo de energia el\'{e}trica para coletar os dados do consumo de energia dos equipamentos eletr\^{o}nicos.
+Uma extensa avalia\c{c}\~{a}o e experimenta\c{c}\~{a}o permitiu avaliar, considerando diferentes cen\'{a}rios e par\^{a}metros, a efici\^{e}ncia do NodePM. Atrav\'{e}s de uma investiga\c{c}\~{a}o foi poss\'{i}vel encontrar dois tipos de novidades, qualitativa e quantitativa. Al\'{e}m disso, os resultados apresentados mediante o planejamento de experimentos foram promissores, sendo dois deles claramente not\'{a}veis: (i) desempenho superior em rela\c{c}\~{a}o a SONDE quando considerado o dataset de 1 semana, independente do equipamento; e (ii) redu\c{c}\~{a}o de 13,7% do consumo de energia quando comparado com o sistema tradicional. Logo, os resultados de tais experimentos obtidos mediante an\'{a}lise estat\'{i}stica evidenciam a viabilidade do NodePM.
+
+
+\section{Principais contribui\c{c}\~{o}es}
+As principais contribui\c{c}\~{o}es desta disserta\c{c}\~{a}o s\~{a}o apresentadas a seguir:
+\begin{itemize}
+	\item{1} An\'{a}lise dostrabalhosrelacionadoscomointuitode investigar uma lacuna para esta pesquisa, bem como formalizar a fundamenta\c{c}\~{a}o te\'{o}rica.
+	\item{2} O desenvolvimento de um prot\'{o}tipo para coletar dados do consumo de energia dos equipamentos eletr\^{o}nicos em tempo real.
+	\item{3}A proposta e implementa\c{c}\~{a}o de um algoritmo, NodePM, baseado em t\'{e}cnicas probabil\'{i}sticas para detectar novidades no consumo de energia dos equipamentos eletr\^{o}nicos.
+	\item{3}O emprego das t\'{e}cnicas de avalia\c{c}\~{a}o de desempenho para quantificar o NodePM em cen\'{a}rios distintos.
+\end{itemize}
+
+\section{Trabalhos futuros}
+Nesta se\c{c}\~{a}o, s\~{a}o apresentados poss\'{i}veis propostas para a continua\c{c}\~{a}o deste trabalho, visto que v\'{a}rias ideias foram surgindo durante o mestrado. No entanto, tais propostas n\~{a}o foram desenvolvidas devido ao tempo e/ou por estarem fora do escopo.
+
+\begin{itemize}
+	\item{1} Desenvolver um m\'{e}todo h\'{i}brido que mude em tempo de intera\c{c}\~{a}o qualquer algoritmo de detec\c{c}\~{a}o de novidades de acordo com o ambiente monitorado.
+	\item{2} Analisar o impacto das transmiss\~{o}es realizadas entre os sensores e o gateway, pois as mensagens de cada sensor s\~{a}o enviadas a cada 5 segundos. Isto \'{e}, cerca de 17 mil transmiss\~{o}es por dia.
+	\item{3} Propor modelos de privacidade baseado em Cavoukian et al. (2010), uma vez que as smart grids revelam informa\c{c}\~{o}es detalhadas do dia-a-dia do usu\'{a}rio (revisite a Figura 4.6).
+	\item{4} Propor algoritmos para reduzir o consumo de energia baseado em tarifa\c{c}\~{a}o em blocos. Isto \'{e}, tarifas diferenciadas por hor\'{a}rio de consumo, como acontece na conta de telefone.
+\end{itemize}
+
+

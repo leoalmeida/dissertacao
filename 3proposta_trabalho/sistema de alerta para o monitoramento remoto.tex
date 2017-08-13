@@ -1,0 +1,92 @@
+
+Trabalhos desenvolvidos equipe do Jó
+
+\chapter{Um sistema de alerta para o monitoramento remoto do consumo de energia usando redes de sensores sem fio}
+2014
+
+\section{Áreas de aplicacões das RSSFs}
+
+	\subsection{Aplicações ambientais}
+	
+	\subsection{Aplicações médicas}
+	
+	\subsection{Aplicações domésticas}
+
+\section{Propriedades das RSSFs} 
+Os ambientes a serem monitorados pelas RSSFs possuem aspectos físicos particulares, tornando assim, a construção da aplicação específica para cada tipo de ambiente. Nesse sentido, esta seção apresenta algumas tarefas típicas que normalmente são encontradas em RSSFs.
+
+\section{Tarefas típicas das RSSFs} 
+
+As atividades requeridas em uma RSSF geralmente dependem do objetivo da aplicação. Tal peculiaridade é relacionada com a tendência que as RSSFs possuem ao executar deter- minadas tarefas colaborativas. Sendo assim, algumas tarefas que envolvem as RSSFs são apresentadas com base em Loureiro et al. (2003), Rocha (2007) e Akyildiz & Vuran (2010).
+
+	\subsection{Determinar o valor de algum parâmetro em um dado local}
+		Essa peculiaridade é co- mum em aplicações ambientais. Por exemplo, deseja-se saber qual é o valor da pressão atmosférica, temperatura e a umidade relativa do ar em locais distintos.
+	
+	\subsection{Detectar eventos de interesse e estimar valores em razão do evento detectado}
+		Essa tarefa típica pode ser encontrada em aplicações domésticas. Por exemplo, deseja-se esti- mar em uma residência quanto o usuário irá gastar de água por mês, sabendo apenas o consumo de água por semana.
+	
+	\subsection{Detectar um objeto de interesse}
+		Esse tipo de tarefa pode ser encontrado em aplicação de tráfego. Por exemplo, deseja-se reconhecer determinados veículos (carro, ônibus e/ou caminhões, por exemplo) em uma rodovia.
+	
+	\subsection{Rastrear um objeto}
+		Essa peculiaridade também pode ser utilizada em aplicações para monitoramento de animais. Por exemplo, deseja-se saber as rotas de migração das aves.
+
+
+\section{Características das RSSFs} 
+As RSSFs possuem características especificas conforme as áreas que são aplicadas. Em razão disso, é necessário tratar questões particulares para que tais características sejam resolvidas. A seguir, algumas características especificas são apresentadas por Correa et al. (2006), Rocha (2007) e Akyildiz & Vuran (2010).
+
+	\subsection{Endereçamento dos sensores} 
+	Dependendo do tipo de aplicação em que a RSSF é usada, o sensor pode ser ou não endereçado individualmente. Quando se deseja con- hecer precisamente onde o dado está sendo coletado (por exemplo, monitoramento de sinais vitais do paciente (Malan et al., 2004)), é necessário que os sensores estejam en- dereçados individualmente. No entanto, se o objetivo da aplicação é saber o valor de uma variável em uma região externa (por exemplo, monitoramento de rio (Hughes et al., 2011)), os sensores não necessitam ser identificados individualmente.
+	
+	
+	\subsection{Agregação dos dados} 
+	É a capacidade da RSSF de sintetizar os dados coletados pelos sensores. Existem ambientes (por exemplo, rios e florestas), que o sensoriamento pode gerar um elevado nível de transmissão de dados. Caso a rede tenha esse cenário, é pos- sível reduzir os números de mensagens transmitidas pelos sensores. Para tanto, os dados devem ser sintetizados antes de serem transmitidos para uma estação base.
+	
+	\subsection{Mobilidade dos sensores} 
+	A depender do ambiente em que as RSSFs estão coletando dados, os sensores podem ou não se deslocar. Por exemplo, os sensores são estáticos quando se deseja monitorar o consumo de energia elétrica de uma residência (Duarte et al., 2011; Filho et al., 2013a). Por outro lado, os sensores são móveis quando se deseja, por exemplo, rastrear os movimentos de alguma espécie (Juang et al., 2002).
+	
+	\subsection{Limitação da energia disponível} 
+	Um dos principais fatores limitantes considerado em um sensor e suas aplicações é o consumo de energia. Geralmente, os sensores são colocados em ambientes de difícil acesso, dificultando, assim, a manutenção das apli- cações. O tempo de vida útil, neste cenário, é dependente da quantidade de energia que o sensor tem a sua disposição. Dessa forma, para aumentar o tempo de vida dos nós sensores, alguns fatores devem ser levados em considerações, tais como protocolos, algo-ritmos e tipos de aplicações.
+	
+	\subsection{Auto-organização da rede} 
+	É a capacidade da rede de configurar os seus recursos(por exemplo, trajetos de comunicação, consumo de energia e posicionamento dos nós) de forma automática e periódica, uma vez que a configuração manual é inviável e muitas vezes impossível. Além disso, sensores podem ficar inativos por causa de problemas de energia e distribuição física. Consequentemente, há a necessidade de mecanismos de auto-organização para que a rede execute suas funções normalmente.
+	
+	\subsection{Escalabilidade} 
+	A depender do ambiente no qual os nós sensores são utilizados, a rede pode crescer de poucos nós para centenas deles. Por exemplo, o sensoriamento em uma floresta pode precisar de centenas ou até mesmo milhares de nós sensores para monitorar o ambiente.
+	
+	\subsection{Tarefas colaborativas}
+	Como dito no início deste capítulo, um dos principais objetivos das RSSFs é executar alguma tarefa colaborativa de interesse. O intuito é detectar, estimar e prover comunicação entre os nós sensores. Por exemplo, instalar nós sensores ao longo do leito de um rio para detectar eventuais inundações em ambientes urbanos.
+
+\section{RSSF na smartGrid}
+
+Segundo Falcão (2009), deve-se entender a smart grid mais como um conceito do que uma tecnologia. Por isso, alguns especialistas definem a smart grid de acordo com a sua concepção (Falcão, 2009; Light, 2012). Nesse sentido, este trabalho, conceitua a smart grid como sendo uma infraestrutura avançada no Sistema Elétrico de Potência (SEP) para melhorar a sua eficiência, confiabilidade e segurança, através de modernas tecnologias de comunicação e de controle automatizado (Siddiqui, 2008; Gungor et al., 2010; Sioshansi, 2012).
+
+
+\subsection{Geração}
+Neste segmento, a rede de energia elétrica tradicional monitora o gerenci- amento da energia por meio de sensores com fio. 
+
+\subsection{Distribuição}
+Neste segmento, os componentes que precisam ser monitorados em tempo real são, por exemplo, as subestações, redes de energia elétrica e linhas subter- râneas.
+
+\subsection{Consumo}
+Neste segmento, as instalações da rede de energia elétrica nas casas dos consumidores não são levadas em consideração. 
+
+
+
+
+\section{Detecção de novidades}
+
+Segundo Spinosa (2008), o termo detecção de novidade pode ser usado para fazer re- ferência a abordagens que são fundamentalmente distintas, dependendo, entre outros aspectos, da aplicação em que o trabalho se insere. No contexto desta pesquisa, o termo detecção de novidade está relacionado com a capacidade que o sistema possui de identi- ficar anomalias, no consumo de energia dos equipamentos eletrônicos, à medida que os dados da RSSF são recebidos.
+É fundamental, portanto, conhecer a distribuição dos dados para a detecção de novi- dades. Para tanto, técnicas não-paramétricas são usadas para tal propósito, as quais con- sideram exemplos do conjunto de treinamento para estimar o seu grupo. Uma das téc- nicas que têm sido utilizadas para detectar novidades em aplicações reais (por exemplo, identificação de veículos em imagens (Munroe & Madden, 2005) e detecção de falhas em motores (Casimir et al., 2006)), é o k-nereast neighbors.
+
+
+\chapter{Trabalhos relacionados}
+
+Atualmente, diferentes projetos de pesquisa tanto internacionais quanto nacionais têm sido publicados ao longo dos anos na área de
+
+No entanto, ape- sar de todos os recentes avanços conquistados, ainda há vários desafios e problemas em aberto nessa área. Por exemplo, a inexistência de uma metodologia para detectar anoma- lias/novidades no consumo de energia dos equipamentos eletrônicos monitorados por uma smart grid. Sendo assim, a seguir são apresentados alguns trabalhos científicos cujo foco corresponde, principalmente, ao monitoramento do consumo de energia elétrica. Em seguida, uma discussão dos trabalhos relacionados é apresentada.
+
+\chapter{Discussão dos trabalhos relacionados}
+Como visto anteriormente, os trabalhos apresentados possuem contribuições reais para a sociedade, empresa e o meio acadêmico. Outro fator a ser analisado são as diversas abordagens propostas em relação às smart grids (por exemplo, diferentes modelos para monitorar o consumo de energia, propostas de tarifas diferenciadas e monitoramento em tempo real via website). 
+
+É fundamental destacar que embora as soluções propostas para gerenciar o consumo de energia elétrica se mostrem eficientes, as mesmas não concentram esforços para prover uma smart grid integrada com técnicas probabilísticas (por exemplo, AM, cadeia de Markov e entropia). Nesse sentido, esta pesquisa diferencia-se das soluções existentes em pelo menos três aspectos:

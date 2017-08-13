@@ -1,0 +1,102 @@
+\select@language {brazil}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {1\ --}Introdu\c {c}\~ao}{11}
+\contentsline {section}{\numberline {1.1}Contextualiza\c {c}\~ao}{11}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {2\ --}Introdu\c {c}\~{a}o/motiva\c {c}\~{a}o}{14}
+\contentsline {section}{\numberline {2.1}Das origens \`a Web Social das Coisas}{15}
+\contentsline {paragraph}{Anos 60}{15}
+\contentsline {paragraph}{Anos 80}{15}
+\contentsline {paragraph}{Anos 90}{15}
+\contentsline {paragraph}{Anos 2000}{17}
+\contentsline {paragraph}{A partir de 2015}{18}
+\contentsline {section}{\numberline {2.2}Organiza\c {c}\~ao do Trabalho}{19}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {3\ --}Contextos envolvidos}{20}
+\contentsline {section}{\numberline {3.1}Computa\c {c}\~{a}o ub\'{i}qua \`a SIoT}{20}
+\contentsline {subsection}{\numberline {3.1.1}Computa\c {c}\~{a}o Ub\'{i}qua}{20}
+\contentsline {subsection}{\numberline {3.1.2}Disappearing Computer}{20}
+\contentsline {paragraph}{Desaparecimento F\'{i}sico}{21}
+\contentsline {paragraph}{Desaparecimento Mental}{21}
+\contentsline {subsection}{\numberline {3.1.3}Internet das Coisas - IoT}{21}
+\contentsline {subsection}{\numberline {3.1.4}Web das Coisas - WoT}{22}
+\contentsline {subsection}{\numberline {3.1.5}Web Social das Coisas - SWoT}{22}
+\contentsline {section}{\numberline {3.2}Edge computing e o surgimento da Fog computing}{23}
+\contentsline {subsection}{\numberline {3.2.1}sub-item x}{23}
+\contentsline {section}{\numberline {3.3}Cloud of Things and Social Cloud}{23}
+\contentsline {subsection}{\numberline {3.3.1}sub-item x}{23}
+\contentsline {section}{\numberline {3.4}Social Virtual Objects}{23}
+\contentsline {subsection}{\numberline {3.4.1}sub-item x}{23}
+\contentsline {section}{\numberline {3.5}Web Sem\^antica e Ontologias de IoT}{23}
+\contentsline {subsection}{\numberline {3.5.1}sub-item x}{23}
+\contentsline {section}{\numberline {3.6}Mundo de IoT e Minera\c {c}\~{a}o de dados}{23}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {4\ --}Trabalhos Relacionados}{25}
+\contentsline {section}{\numberline {4.1}X}{25}
+\contentsline {subsection}{\numberline {4.1.1}Sub X}{25}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {5\ --}Proposta de trabalho}{26}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {6\ --}Tecnologias e Plataformas de IoT}{27}
+\contentsline {section}{\numberline {6.1}Novos Protocolos}{27}
+\contentsline {subsection}{\numberline {6.1.1}6LoWPAN}{27}
+\contentsline {subsection}{\numberline {6.1.2}RPL}{27}
+\contentsline {subsection}{\numberline {6.1.3}CoAP}{28}
+\contentsline {subsection}{\numberline {6.1.4}Dash7}{28}
+\contentsline {subsection}{\numberline {6.1.5}MQTT}{28}
+\contentsline {section}{\numberline {6.2}Plataformas}{28}
+\contentsline {subsection}{\numberline {6.2.1}Thingspeak}{28}
+\contentsline {subsection}{\numberline {6.2.2}Pachube/Xively}{30}
+\contentsline {subsection}{\numberline {6.2.3}IFTTT}{31}
+\contentsline {section}{\numberline {6.3}Arquitetura Proposta}{33}
+\contentsline {subsection}{\numberline {6.3.1}Descri\c {c}\~{a}o}{33}
+\contentsline {section}{\numberline {6.4}Modelo Utilizado}{33}
+\contentsline {subsection}{\numberline {6.4.1}Modelo de conhecimento}{33}
+\contentsline {subsection}{\numberline {6.4.2}Defini\c {c}\~{a}o dos Objetos}{33}
+\contentsline {subsection}{\numberline {6.4.3}Estrutura em Grafo}{33}
+\contentsline {subsection}{\numberline {6.4.4}Processamento dos dados}{33}
+\contentsline {subsection}{\numberline {6.4.5}Processamento dos dados}{33}
+\contentsline {paragraph}{Modelo B\'{a}sico}{33}
+\contentsline {paragraph}{Modelo Est\'{a}tico Complexo}{34}
+\contentsline {paragraph}{Modelo Din\^{a}mico Complexo}{34}
+\contentsline {section}{\numberline {6.5}Ferramenta Desenvolvida}{35}
+\contentsline {section}{\numberline {6.6}Outras Ferramentas}{35}
+\contentsline {section}{\numberline {6.7}M\'{e}todo agropastoril}{35}
+\contentsline {subsection}{\numberline {6.7.1}Coleta e Armazenamento}{35}
+\contentsline {subsubsection}{\numberline {6.7.1.1}\'{a}gua}{35}
+\contentsline {subsubsection}{\numberline {6.7.1.2}Recursos Minerais}{35}
+\contentsline {subsubsection}{\numberline {6.7.1.3}Recursos Qu\'{i}micos}{35}
+\contentsline {subsubsection}{\numberline {6.7.1.4}Outros tipos de recursos}{35}
+\contentsline {subsection}{\numberline {6.7.2}Transporte e aplica\c {c}\~{a}o}{35}
+\contentsline {subsection}{\numberline {6.7.3}Defini\'{c}\~{o}es B\'{a}sicas}{35}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {7\ --}Resultados Esperados}{37}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {8\ --}Arquitetura proposta e Padr\~{o}es Utilizados}{38}
+\contentsline {section}{\numberline {8.1}Arquitetura}{38}
+\contentsline {subsection}{\numberline {8.1.1}sub-item x}{38}
+\contentsline {section}{\numberline {8.2}Publisher/Subscriber}{38}
+\contentsline {subsection}{\numberline {8.2.1}sub-item x}{38}
+\contentsline {section}{\numberline {8.3}Big Data}{38}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {9\ --}Tecnologias Utilizadas}{40}
+\contentsline {section}{\numberline {9.1}Desenvolvimento}{40}
+\contentsline {subsection}{\numberline {9.1.1}NodeJS}{40}
+\contentsline {subsection}{\numberline {9.1.2}AngularJS}{40}
+\contentsline {subsection}{\numberline {9.1.3}Material Design}{40}
+\contentsline {subsection}{\numberline {9.1.4}Plugins JS}{40}
+\contentsline {paragraph}{Johnny5}{40}
+\contentsline {paragraph}{Genisys}{40}
+\contentsline {paragraph}{AngularFire}{40}
+\contentsline {paragraph}{AngularMaterial}{40}
+\contentsline {section}{\numberline {9.2}Cloudmqtt}{41}
+\contentsline {subsection}{\numberline {9.2.1}MQTT}{41}
+\contentsline {section}{\numberline {9.3}Firebase}{41}
+\contentsline {subsection}{\numberline {9.3.1}Database/ Pub-Sub}{41}
+\contentsline {section}{\numberline {9.4}Prot\'otipos}{41}
+\contentsline {subsection}{\numberline {9.4.1}Arduino}{41}
+\contentsline {subsection}{\numberline {9.4.2}NodeMCU}{41}
+\contentsline {subsection}{\numberline {9.4.3}Firmata firmware}{41}
+\contentsline {section}{\numberline {9.5}Sensors}{41}
+\contentsline {subsection}{\numberline {9.5.1}sub-item x}{41}
+\contentsline {section}{\numberline {9.6}Processamento dos dados}{41}
+\contentsline {subsection}{\numberline {9.6.1}Apache Kafka}{41}
+\contentsline {subsection}{\numberline {9.6.2}Apache Storm}{42}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {10\ --}Conclus\~ao}{44}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {11\ --}Conclus\~A\IeC {\pounds }o}{45}
+\contentsline {section}{\numberline {11.1}Principais contribui\c {c}\~{o}es}{45}
+\contentsline {section}{\numberline {11.2}Trabalhos futuros}{46}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {12\ --}Conclus\~ao}{47}
+\contentsline {chapter}{Refer\^encias}{48}
+\contentsline {chapter}{Gloss\'ario}{49}

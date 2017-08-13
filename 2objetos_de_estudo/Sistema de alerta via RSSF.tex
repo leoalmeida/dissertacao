@@ -1,0 +1,51 @@
+\chapter{Sistema de alerta via RSSF}
+Neste capítulo, é apresentado o objetivo deste trabalho, isto é, a proposta do Nov- elty Detection Power Meter (NodePM) que é baseado em técnicas probabilísticas, tais como AM, cadeia de Markov e entropia. Além disso, o desenvolvimento da plataforma de monitoramento remoto do consumo de energia para os equipamentos eletrônicos é apresentado.
+
+
+\section{Sistema de alerta para o monitoramento remoto do consumo de energia}
+
+Com a finalidade de alcançar os objetivos deste trabalho, algumas etapas foram necessárias, sendo as principais: (i) o desenvolvimento de uma plataforma na qual utiliza uma RSSF associada a uma aplicação em nuvem; e (ii) a proposta do NodePM para detectar novi- dades no consumo de energia dos equipamentos eletrônicos. É fundamental destacar que as novidades podem surgir, por exemplo, quando um equipamento consome energia acima do esperado e/ou quando o equipamento começa a ter um comportamento fora do padrão.
+
+\section{ Plataforma desenvolvida usando RSSF}
+
+A plataforma proposta (Figura 3.1) é composta por três etapas:
+
+\begin{itemize}
+\item{Etapa 1} Responsável pela aquisição dos dados de consumo dos equipamentos eletrônicos por meio de uma RSSF.
+\item{Etapa 2}Eestá relacionada com o processamento dos dados coletados na Etapa 1. Para tanto, foi desenvolvido um gateway e uma aplicação em um servidor em nuvem (app engine1), no qual gerencia os dados recebidos da RSSF.
+\item{Etapa 3} Responsável pela disponibilização das informações sobre o consumo de energia elétrica para os interessados. Para isso, um protótipo para smartphone foi desenvolvido.
+\end{itemize}
+
+Na Figura 3.1, é apresentado o funcionamento da plataforma de monitoramento re- moto do consumo de energia elétrica. Para isso, foram construídos protótipos de RSSF a partir da montagem de wattímetros (equipamentos que medem o consumo de ener- gia elétrica) Kill-a-Watt da empresa P32.
+
+\section{Construção do gateway com a plataforma Arduino}
+
+Para enviar os dados sensoriados da RSSF e transmiti-los para um servidor em nuvem, foi necessário desenvolver um gateway, ilustrado na Figura 3.3. Para a construção desse gate- way, optou-se por utilizar a plataforma Arduino por ser programável, extensível, portável e de baixo consumo de energia.
+Como o gateway projetado deve-se tanto comunicar com os diversos módulos XBee quanto ter acesso a uma rede Ethernet, foi necessário expandir o uso do Arduino através de Shields. Assim, utilizaram-se dois Shields (Shield XBee e Shield Ethernet) para fazer a conexão entre a RSSF e o servidor em nuvem. Dessa forma, o Shield XBee (Rótulo 1, Figura 3.3) recebe os dados sensoriados da RSSF e transmite tais dados por meio do Shield Ethernet (Rótulo 2, Figura 3.3) para um servidor em nuvem.
+
+\section{Smart Sensors}
+
+O Smart Sensors é modelado usando os conceitos de AM, cadeias de Markov e entropia. No
+Algoritmo 3.1 é descrito o funcionamento do NodePM, o qual consiste de três etapas:
+
+\begin{itemize}
+	\item{Etapa 1} Processar os dados por meio de um classificador, K-Nearest Neigh- bors (KNN) (Linha 2, Algoritmo 3.1), para catalogar o estado comportamental dos equipamentos eletrônicos.
+	\item{Etapa 2} Capturar o elemento catalogado na primeira etapa e adicionar no estado comportamental da cadeia de Markov (Linha 3, Algoritmo 3.1).
+	\item{Etapa 3} Obter a matriz de probabilidade da cadeia de Markov e calcular o grau de incerteza dos equipamentos eletrônicos, usando a variação da entropia (Li- nhas 4 e 5, Algoritmo 3.1).
+\end{itemize}
+
+
+\section{Classificação de padrões comportamentais}
+Nesta subseção, é apresentada a técnica escolhida, KNN, para classificar os dados rece- bidos da RSSF com o intuito de incorporá-los na cadeia de Markov.
+
+
+
+\section{Obtenção de padrões comportamentais}
+
+A obtenção dos padrões comportamentais do NodePM é realizada mediante a cadeia de Markov (Markov, 1971). Assim, conforme o KNN classifica as instâncias desconhecidas, como descrita na etapa anterior, uma nova cadeia de Markov é gerada. 
+
+\section{Detecção de novidades com a variação da entropia da cadeia de Markov}
+Com o conjunto das probabilidade das cadeias de Markov gerado, torna-se possível cal- cular a variação da entropia a cada instante de tempo por meio da equação 2.8, como apresentado na Subseção 2.2.4, e exposta novamente:
+
+Nesse sentido, cada interação do usuário com o equipamento gera uma curva que
+representa as alterações comportamentais do consumo de energia de cada equipamento. A curva pode ser utilizada como uma medida de incerteza, isto é, o nível de incerteza (novidade) das cadeias de Markov pode ser obtida por meio da variação da entropia

@@ -1,0 +1,37 @@
+\chapter{Experimentos e resultados}
+Neste capítulo, é apresentada a metodologia utilizada para gerar os experimentos e os resultados obtidos. Para tanto, a validação do método proposto, nomeado NodePM, foi dividida em três etapas. Na primeira etapa, Seção 4.2, apresenta e discute as novidades/anomalias encontradas no consumo de energia dos equipamen- tos eletrônicos. Na segunda etapa, Seção 4.3, é realizado uma avaliação de desempenho tendo como parâmetro de comparação o Self-Organizing Novelty Detection (SONDE), des- crito na Subseção 4.1.2. Por fim, na terceira etapa, Seção 4.4, a eficiência em detectar anomalias no consumo de energia dos equipamentos eletrônicos é validada.
+
+
+\section{Metodologia}
+
+Segundo Jain (1991), cada sistema computacional possui a sua particularidade. Dessa forma, a avaliação de desempenho torna-se algo peculiar para cada sistema avaliado. Nesse sentido, não é comum usar a mesma metodologia de avaliação para sistemas com- putacionais diferentes. Para esta pesquisa três etapas compõem a avaliação realizada, sendo elas: (i) a definição da base de dados; (ii) a escolha do baseline para o método; e (iii) o ambiente monitorado. A seguir, cada uma dessas etapas é descrita.
+
+
+\subsection{Base de dados}
+
+
+O método proposto utilizou um conjunto de dados (dataset), contendo informações reais sobre a interação do usuário com o equipamento eletrônico. Essa base de dados possui quatro atributos, sendo eles: (i) identificador do equipamento atribuído pelo sensor; (ii) potência em Watt; (iii) a data de utilização do equipamento; (iv) e o tempo de uso do equipamento naquele momento.
+
+
+\subsection{O baseline para o algoritmo proposto}
+Para realizar uma análise de desempenho do NodePM, como será feito na Seção 4.3, foi necessário obter um baseline. Para tanto, o baseline foi o Self-Organizing Novelty Detection (SONDE) (Albertini & Mello, 2007). A SONDE é uma rede neural que adapta incremen- talmente sua estrutura de conhecimento (neurônio), com o objetivo de detectar novidades em ambientes dinâmicos. Para isso, a SONDE classifica em um mesmo neurônio padrões de entradas similares. Quando nenhum neurônio é capaz de classificar um padrão de entrada, um novo neurônio é criado indicando uma novidade no ambiente.
+
+
+\subsection{Descrição do ambiente monitorado}
+Para produzir resultados com boa precisão, foi criado um ambiente real para monitorar o consumo de energia dos equipamentos eletrônicos em uma residência. Nesse cenário, os equipamentos se localizavam em cômodos diferentes e, por conveniência, o gateway Arduino estava junto do roteador para comunicar com a Internet. O monitoramento do consumo de energia dos equipamentos eletrônicos, sumarizados na Tabela 4.1, foram feitas durante os anos de 2012 (Julho, Agosto, Setembro, Novembro e Dezembro) e 2013 (Janeiro, Fevereiro, Junho e Julho) com período de tempo variável.
+
+
+\section{Experimentos de detecção de novidades com o NodePM}
+Para alcançar um dos objetivos deste trabalho, foi necessário investigar como as novi- dades ocorrem. Para tanto, utilizou-se as partições do conjunto de dados para a realização dos experimentos. Com isto, foi possível identificar dois tipos de novidades: qualitativa e quantitativa.
+
+\begin{itemize}
+	\item{Tipo 1} Ocorre quando o equipamento eletrônico tem uma mudança abrupta no seu comportamento padrão, ou seja, ocorreu uma troca não habitual no seu estado, passando do estado x para o estado y, situação essa que não era esperado. (qualita- tiva)
+	\item{Tipo 2} Acontece quando o equipamento eletrônico começa a consumir mais energia que o esperado durante um determinado período, ou seja, passando do estado usual do usuário. (quantitativa)
+\end{itemize}
+
+
+A seguir alguns experimentos são discutidos, apresentando como acontece a novi- dade.
+
+
+\section{Avaliação de desempenho do NodePM com a SONDE}
+Esta seção avalia o desempenho do NodePM, considerando as seguintes medidas de de- sempenho: sensibilidade (conhecida por alguns autores como taxa de detecção), precisão, especificidade e acurácia. Essas medidas, apresentadas a seguir, são calculadas a partir de uma matriz de confusão ilustrada na Figura 4.4, no qual avalia os resultados com base nas perdas causadas.
