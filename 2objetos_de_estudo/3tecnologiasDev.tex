@@ -1,0 +1,49 @@
+\section{Tecnologias Utilizadas pela plataforma}
+\subsection{NodeJS}
+\subsection{AngularJS}
+\subsection{Material Design}
+\subsection{Plugins JS}
+\paragraph{Johnny5} 
+\paragraph{Genisys}
+\paragraph{AngularFire}
+\paragraph{AngularMaterial}
+\subsection{Comunicação}
+\paragraph{Webservices}
+\paragraph{MQTT}
+\paragraph{Cloudmqtt}
+\subsection{Database}
+\paragraph{Firebase vs MongoDB vs GraphDB}
+\subsection{Protótipos}
+\paragraph{Arduino}
+\paragraph{NodeMCU}
+\paragraph{Firmata firmware}
+\subsection{Sensors}
+\paragraph{sub-item x}
+\subsection{Processamento dos dados}
+\paragraph{Apache Kafka}
+Ferramenta projetada para funcionar como um midleware de mensageria (Figura~\ref{fig:arqkafka}), utilizando o padrão Publish/Subscribe para criar canais ("streams") de mensagens entre várias origens diferentes ("Producers") e os vários destinos inscritos ("Consumers").
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.5\textwidth]{fig0.png}
+	\caption{Arquitetura do Kafka}
+	\label{fig:arqkafka}
+\end{figure}
+
+Com a utilização de conectores, bancos de dados podem ser utilizados para persistência de mensagens e ao conectá-lo à ferramentas de ánalise e processamento de dados ("Stream Processors"), suas mensagens podem ser transformadas antes de sua publiblicação.
+
+Dentre os principais benefícios da ferramenta estão: publicação em tempo real, funcionamento distribuído em um ou mais servidores, separação dos canais em categorias/tópicos, possui recursos de particionamento tolerantes à falhas e garantia na entrega das mensagens com replicação de dados. 
+
+\paragraph{Apache Storm}
+Essa ferramenta Open Source pode ser utilizada na execução de tarefas em paralelo de forma continua, que é o caso de grande parte dos projetos de IoT. Seus Fluxos de trabalhos ou "Topologias", devem ser projetados a partir de grafos acíclicos direcionados (DAG's) que ao entrar em execução, realizam suas tarefas indefinidamente processando os dados gerados pelos dispositivos ubíquos de forma contínua. Suas topologias só param de rodar em 2 casos, a partir da intervenção do usuário matando seu processo ou na ocorrência de uma falha irrecuperável. 
+
+Sua topologia é formada por "spouts" ou "bolts" como seus vértices, enquanto que suas arestas representam fluxos de dados trafegados entre os nós do grafo. Em conjunto, vértices e arestas da topologia agem como um pipeline de transformação dos dados em tempo real(Figura~\ref{fig:arqstorm}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.5\textwidth]{fig4.png}
+	\caption{Exemplo de topologia no Storm}
+	\label{fig:arqstorm}
+\end{figure}
+
+O Storm não possui suporte nativo aos clusters do Hadoop/YARN (Ainda em desenvolvimento), ao invés disso ele usa a estrutura da ferramenta Zookeeper e seus próprios processos de trabalho (master/minion) para coordenação de suas topologias, estados e mensagens semânticas de garantia. Além disso, ele pode consumir e escrever arquivos no HDFS e também rodar nativamente sobre o gerenciador de cluster Apache Mesos ou com o suporte da plataforma de orequestração de containers Marathon.

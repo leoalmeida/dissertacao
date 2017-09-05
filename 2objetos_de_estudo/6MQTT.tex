@@ -1,0 +1,88 @@
+\section{MQTT}
+%%http://mqtt.org/
+%%http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html
+%%[RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997.http://www.ietf.org/rfc/rfc2119.txt
+%%[RFC3629] Yergeau, F., "UTF-8, a transformation format of ISO 10646", STD 63, RFC 3629, November 2003  http://www.ietf.org/rfc/rfc3629.txt
+%%[RFC5246] Dierks, T. and E. Rescorla, "The Transport Layer Security (TLS) Protocol Version 1.2", RFC 5246, August 2008. http://www.ietf.org/rfc/rfc5246.txt
+%%[RFC6455] Fette, I. and A. Melnikov, "The WebSocket Protocol", RFC 6455, December 2011. http://www.ietf.org/rfc/rfc6455.txt
+%%[Unicode] The Unicode Consortium. The Unicode Standard. http://www.unicode.org/versions/latest/
+
+MQTT stands for MQ Telemetry Transport. It is a publish/subscribe, extremely simple and lightweight messaging protocol, designed for constrained devices and low-bandwidth, high-latency or unreliable networks. The design principles are to minimise network bandwidth and device resource requirements whilst also attempting to ensure reliability and some degree of assurance of delivery. These principles also turn out to make the protocol ideal of the emerging “machine-to-machine” (M2M) or “Internet of Things” world of connected devices, and for mobile applications where bandwidth and battery power are at a premium.
+
+
+Atualmente em sua versão 3.1.1, MQTT is a Client Server publish/subscribe messaging transport protocol. It is light weight, open, simple, and designed so as to be easy to implement. These characteristics make it ideal for use in many situations, including constrained environments such as for communication in Machine to Machine (M2M) and Internet of Things (IoT) contexts where a small code footprint is required and/or network bandwidth is at a premium.
+The protocol runs over TCP/IP, or over other network protocols that provide ordered, lossless, bi-directional connections. Its features include:
+
+·         Use of the publish/subscribe message pattern which provides one-to-many message distribution and decoupling of applications.
+·         A messaging transport that is agnostic to the content of the payload.
+·         Three qualities of service for message delivery:
+·         "At most once", where messages are delivered according to the best efforts of the operating environment. Message loss can occur. This level could be used, for example, with ambient sensor data where it does not matter if an individual reading is lost as the next one will be published soon after.
+·         "At least once", where messages are assured to arrive but duplicates can occur.
+·         "Exactly once", where message are assured to arrive exactly once. This level could be used, for example, with billing systems where duplicate or lost messages could lead to incorrect charges being applied.
+·         A small transport overhead and protocol exchanges minimized to reduce network traffic.
+·         A mechanism to notify interested parties when an abnormal disconnection occurs.
+
+\subsection{Entidades descritas}
+
+\paragraph{Cliente}
+A program or device that uses MQTT. A Client always establishes the Network Connection to the Server. It can
+·         Publish Application Messages that other Clients might be interested in.
+·         Subscribe to request Application Messages that it is interested in receiving.
+
+·         Unsubscribe to remove a request for Application Messages.
+
+·         Disconnect from the Server.
+
+\paragraph{Servidor}
+A program or device that acts as an intermediary between Clients which publish Application Messages and Clients which have made Subscriptions. A Server
+
+·         Accepts Network Connections from Clients.
+·         Accepts Application Messages published by Clients.
+
+·         Processes Subscribe and Unsubscribe requests from Clients.
+
+·         Forwards Application Messages that match Client Subscriptions.
+
+
+\paragraph{Assinatura} A Subscription comprises a Topic Filter and a maximum QoS. A Subscription is associated with a single Session. A Session can contain more than one Subscription. Each Subscription within a session has a different Topic Filter.
+
+\paragraph{Tópicos} The label attached to an Application Message which is matched against the Subscriptions known to the Server. The Server sends a copy of the Application Message to each Client that has a matching Subscription.
+Com o processo de filtragem dos tópicos (ou subtópicos) An expression contained in a Subscription, to indicate an interest in one or more topics. A Topic Filter can include wildcard characters.
+
+\paragraph{Sessão} 
+A stateful interaction between a Client and a Server. Some Sessions last only as long as the Network Connection, others can span multiple consecutive Network Connections between a Client and a Server.
+
+\paragraph{Pacotes de controle} 
+A packet of information that is sent across the Network Connection. The MQTT specification defines fourteen different types of Control Packet, one of which (the PUBLISH packet) is used to convey Application Messages.
+
+\subsection{Estrutura dos Pacotes e seus diferentes tipos}
+
+\paragraph{Cabeçalhos dos pacotes}
+\paragraph{Payload dos pacotes} 
+\paragraph{Tipos de pacotes} 
+
+CONNECT
+CONNACK
+PUBLISH
+PUBACK
+PUBREC
+PUBREL
+PUBCOMP
+SUBSCRIBE
+SUBACK
+UNSUBSCRIBE
+UNSUBACK
+PINGREQ
+PINGRESP
+DISCONNECT
+
+\subsection{Operação}
+
+
+\subsection{Operação utilizando WebSockets no transporte}
+If MQTT is transported over a WebSocket [RFC6455] connection, the following conditions apply:
+·         MQTT Control Packets MUST be sent in WebSocket binary data frames. If any other type of data frame is received the recipient MUST close the Network Connection [MQTT-6.0.0-1].
+·         A single WebSocket data frame can contain multiple or partial MQTT Control Packets. The receiver MUST NOT assume that MQTT Control Packets are aligned on WebSocket frame boundaries [MQTT-6.0.0-2].
+·         The client MUST include “mqtt” in the list of WebSocket Sub Protocols it offers [MQTT-6.0.0-3].  
+·         The WebSocket Sub Protocol name selected and returned by the server MUST be “mqtt” [MQTT-6.0.0-4].
+·         The WebSocket URI used to connect the client and server has no impact on the MQTT protocol.

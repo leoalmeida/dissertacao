@@ -1,0 +1,69 @@
+\chapter{Conceitos tecnológicos envolvidos}
+
+\section{Computação ubíqua à  SIoT}
+	\subsection{Computação Ubíqua}
+	A computação ubiqua deu nome à terceira onda da computação, iniciada por Mark Weiser em seu artigo ~\cite{Weiser1991}. Segundo outro artigo de sua autoria, ele~\cite{Weiser:1997:CAC:504928.504934} define a terceira onda da computação assim; 
+	"...Esse terceiro momento ocorre quando as tecnologias recuam para o segundo plano de nossas vidas e muitos computadores (não apenas um) de forma conjunta passam a exercer um papel auxiliar para as pessoas sem tomar tempo do foco principal de sua atenção.
+	
+	O principal objetivo das pesquisas na área da computação ubíqua são relacionadas ao refinamento dos dispositivos eletrônicos de forma que sua utilização seja efetiva e eficiente na criação de um contexto computacional~\cite{VanSyckel:2014:SPP:2638728.2641672}, seria como criar uma "conciência virtual" para esse dispositivos de forma que sua utilização possa se tornar transparente para as pessoais. 
+	
+	Infelizmente, para grande parte das aplicações nesse paradigma, operar seus dispositivos inteligentes de forma transparente às pessoas significa ter acesso a informações altamente sensíveis de individuos, exigindo que esses dispositivos sejam projetados cuidadosamente de forma a não se tornar um sistema de fiscalização. Por outro lado, sistemas ubíquos precisam ser fortemente examinados sobre uma perspectiva de ataques cibernéticos, pois já se sabe de antemão o quão valiosa são suas infomações, suscitando grande interesse á pessoas mal-intencionadas.
+	
+	\subsection{Disappearing Computer}
+	Baseado nas definições de Weiser sobre Computação Ubíqua ~\cite{Weiser1991}, surgiu a necessidade de ampliar as pesquisas em tecnologias que fazem dos computadores objetos imperceptíveis, ficando apenas em segundo plano sem tirar o foco das pessoas. A partir dessa disruptura nasceu o termo "Disappearing Computer" com a distinção dos dispositivos invisíveis em 2 tipos Desaparecimento Físico e Desaparecimento Mental como descrito por Streitz em ~\cite{streitz2001augmented}. 
+	
+	\paragraph{Desaparecimento Físico}
+	Como o nome já diz, um dispositivo computacional desaparece físicamente, quando ele é tão pequeno que cabe na palma da mão, podendo ser costurado em tecidos, colocado junto ao corpo das pessoas ou mesmo implantado no corpo. Na maior parte dos casos, o dispositivo é integrado à um produto de pequena dimensão onde seus recursos computacionais se tornam invisíveis.
+	
+	\paragraph{Desaparecimento Mental}
+	O aspecto essencial desses cenários é projetar os dispositivos de forma a não serem mais percebidos como computadores e sim como mais um dos elementos que compõe aquele ambiente. Aqui o desaparecimento se limita aos olhos de seus usuários. O dispositivo não precisa ser invisível fisicamente, ele pode estar embutido em portas, janelas e mobiliários ou ter apenas sua aparência modificada, dando naturalidade ao incluí-lo no ambiente com sua nova roupagem e ficando oculto ao olhar humano.
+	
+	\subsection{Internet das Coisas - IoT}
+	Propõe um ecossistema de "coisas" interconectadas. Se entende por "coisa", objetos geralmente compostos por pequenos sistemas computacionais embarcados que contam com a habilidade de captar dados do ambiente em análise trocando informação com outras "coisas" diretamente ou através de uma rede.
+	
+	Sua principal característica que acaba inviabilizando uma implantação universal da Internet das Coisas nos dias atuais é quanto a forma de busca e comunicação entre os diversos dispositivos ubíquos disponíveis na rede, que deve ser baseado em um identificador único dentro na rede (ex: Seu IP) ou seja, cada "coisa" conectada à rede terá que possuir seu identificador próprio. Porém, enquanto a migração do protocolo IPv4 para o IPv6 não se concretizar, será econômicamente inviável implementar um ecossistema novo para a Internet das Coisas que seja amplamente universal. Fora isso, como essa característica não é a única, e novas tecnologias continuam sendo pesquisadas e lançadas no mercado, nada impede que sejam feitas adaptações nas redes existentes para alcançar implementações baseadas na Internet das Coisas. A mais promissora delas é a "Web das Coisas" cujo ecossistema é baseado em protocolos da Web existentes e que já estão consolidados, como detalhado no próximo item.
+	
+	\subsection{Web das Coisas - WoT}
+	A partir de um consenso onde a rede mundial de computadores seria a mais viável para criar uma Internet das Coisas universalizada, apareceram diversas pesquisas com esse objetivo e continuam aparecendo. Porém, a adesão ao novo protocolo de roteamento (IPv6) com identificadores únicos para todos os dispositivo, primordial para sua consolidação, não está ocorrendo com a velocidado prevista criando um hiato na universalização da internet das coisas, já que o protocolo atual (IPv4) não é adequado a essa nova realidade por sua escassez de identificadores.
+	
+	Como esse processo de migração será lento, pesquisadores e empresas iniciaram suas pesquisas utilizando as estruturas da Web atual, adaptando formas de identificar os elementos dentro da rede. O maior avanço na direção de criar um elo entre os mundos físicos e virtuais veio da ramificação de IoT chamada de "Web das Coisas", que utiliza tecnologias da Web (web services, web sockets e etc.) na identificação e comunicação entre os elementos de uma mesma rede de sensores ubíquos. Dessa forma, a proposta seria que a manutenção das redes baseadas na "Web das Coisas" não seja afetada com o fim da migração para o protocolo IPv6, havendo uma convivência harmônica entre as novas redes de dispositivos e que as novas tecnologias criadas para a Web das Coisas possam ser migradas sem traumas para a Internet das Coisas.
+	
+	Ainda que a causa principal dessa ramificação seja o avanço na aplicação das novas tecnologias, ao avaliar técnicamente a comunicação entre os diversos dispositivos inteligentes existentes atualmente, vemos que há uma grande heterogêneidade de implementações, resultando em uma complexidade excessiva para firmar essa comunicação. Em um futuro próximo, a falta de um protocolo unificado para troca de mensagens inviabilizaria uma interação transparente entre esses dispositivos inteligentes. Na solução desse problema, a incorporação de mecanismos utilizados na criação dos Web Services pela internet tem sido estudada para viabilizar a criação de uma conexão espontânea entre os dispositivos inteligentes, apenas fazendo adequações necessárias à nova realidade da Web das Coisas.
+	
+	%Inclusão de Web Sockets e outras tecnologias web
+	
+	\subsection{Web Social das Coisas - SWoT}
+	Esse paradigma, o mais embrionário dentre os que possuem como origem a Computação Ubíqua, realça as pesquisas no campo da inteligência computacional e o aspecto social na comunicação entre usuários, incluindo dispositivos ubíquos no relacionamento. Sugundo ~\cite{Mashal2015}, esse relacionamento pode ser atingido com a utilização da Web Semântica e tradução de dados estruturados em linguagem natural. Porém, precisam ser prospostas novas formas dos dispositivos ubíquos interpretarem as redes de relacionamento existentes criando uma comunicação transparente entre dispositivos e se comunicando de forma natural e não intrusiva de forma que eles sejam devidamente compreendidos pelas pessoas.
+	
+
+\section{Edge computing e o surgimento da Fog computing}
+\subsection{sub-item x}
+
+\section{Cloud of Things and Social Cloud}
+\subsection{sub-item x}
+
+\section{Social Virtual Objects}
+\subsection{sub-item x}
+
+\section{Web Semântica e Ontologias de IoT}
+\subsection{sub-item x}
+
+\section{Mundo de IoT e Mineração de dados}
+Mesmo que pesquisas nesse assunto não tenha relação direta à Internet das Coisas, tratar dados coletados por dispositivos ubíquos possui alta relevância na criação de uma Inteligência Computacional. 
+
+Analisar e processar quantidade elevada de dados exige cuidados para evitar que seja extraída informação sem utilidade ou inconsistente, podendo criar sérios problemas. Em projetos de Internet das Coisas esses pontos devem ser observados ao analisar os dados: 
+
+\begin{labeling}{Complexidade}
+	\item[Volume]Organizações coletam dados de uma grande variedade de fontes, incluindo transações comerciais, redes sociais e informações de sensores ou dados transmitidos de máquina a máquina. No passado, armazenar tamanha quantidade de informações teria sido um problema ? mas novas tecnologias (como o Hadoop) têm aliviado a carga.
+	\item[Velocidade] Os dados fluem em uma velocidade sem precedentes e devem ser tratados em tempo hábil. Tags de RFID, sensores, celulares e contadores inteligentes estão impulsionado a necessidade de lidar com imensas quantidades de dados em tempo real, ou quase real. 
+	\item[Variedade] Os dados são gerados em todos os tipos de formatos - de dados estruturados, dados numéricos em bancos de dados tradicionais, até documentos de texto não estruturados, e-mail, vídeo, áudio, dados de cotações da bolsa e transações financeiras.
+	\item[Variabilidade] Além da velocidade e variedade de dados cada vez maiores, os fluxos de dados podem ser altamente incosistentes com picos periódicos. Existe algo em tendência nas redes sociais? Diariamente, picos de dados sazionais ou picos gerados com base em eventos podem ser um desafio de gerenciar. Ainda mais quando falamos de dados não estruturados. 
+	\item[Complexidade] Os dados de hoje vem de várias fontes, o que torna difícil estabelecer uma relação, corresponder, limpar e transformar dados entre diferentes sistemas. No entanto, para que seus dados não saiam rapidamente de controle, é necessário ligar e correlacionar relações, hierarquias e as várias ligações de dados.
+\end{labeling}
+
+%verificar se o volume de dados coletados exigirá cuidados especiais na manutenção da eficiência de processamento
+%quais são as origens que os dados poderão vir e como identificá-los, 
+%quais metadados a informação possui e qual já são conhecidos, 
+%qual tipo de informação pretendemos extrair durante o procesamento dos dados, onde será persistido a informação extraída nos dados considerando os modelos de apresentação dos dados.
+%~\cite{TSAI2014}
+

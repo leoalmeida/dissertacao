@@ -1,18 +1,20 @@
-\chapter{Tecnologias e Plataformas de IoT}
+\chapter{Métodos e tecnologias}
 
-\section{Novos Protocolos}
-\subsection{6LoWPAN}
+\section{Tecnologias de IoT}
+
+\subsection{Novos Protocolos}
+\paragraph{6LoWPAN}
 Possui como objetivo principal possibilitar a comunica\c{c}\~ao atrav\'es do protocolo IPv6 nas redes PAN(IEEE 802.15.4), definida para cria\c{c}\~ao de redes sem fio pessoais com baixo consumo de energia e habilitando a conex\~ao \`a internet de micro componentes e sensores. Esse protocolo se apoia na concep\c{c}\~ao de que a Internet \'e integralmente constru\'ida com IPs e cada dispositivo conectado possui seu pr\'oprio IP o tornando parte de um todo no mundo da Internet ou melhor na Internet das Coisas.
-\subsection{RPL}
+\paragraph{RPL}
 De forma um pouco diferente ao 6LoWPAN, esse protocolo focou em atender \`a diversidade de requisitos e aplica\c{c}\~oes presentes no mundo da Internet das Coisas. Vai desde a sua utiliza\c{c}\~ao nas redes urbanas (smart cities), passando pela automatiza\c{c}\~ao de casas e edif\'icios(smart homes and buildings) at\'e o suporte \`a outros tipos de automatiza\c{c}\~ao (smart spaces, smart cars, etc). Para atingir seu objetivo ele usa como base a teoria dos grafos ac\'iclicos direcionados (do ingl\^es DAG) para criar sua topologia, viabilizando a utiliza\c{c}\~ao de um protocolo de roteamento para cria\c{c}\~ao de suas pr\'oprias rotas contendo um ou mais destinos orientados que s\~ao atualizados em intervalos aleat\'orios de tempo.
-\subsection{CoAP}
+\paragraph{CoAP}
 Protocolo de transmiss\~ao web desenhado espec\'ificamente para uso em aplica\c{c}\~oes M2M (machine-to-machine) como smart energy e smart homes, onde suas redes e n\'os ficam restritos dentro de seu pr\'oprio ecossistema. Ele foi desenhado para utilizar uma quantidade m\'inima de recursos do dispositivo e da rede, utilizando o j\'a consolidado UDP no lugar de construir uma pilha de transporte complexa. Na linha de seguran\c{c}a o CoAP prop\~oe par\^ametros DTLS equivalentes \`as chaves RSA de 3072 bits, conseguindo manter um n\'ivel aceit\'avel de performance at\'e nos menores n\'os.
-\subsection{Dash7}
+\paragraph{Dash7}
 Protocolo de redes sem fio de c\'odigo aberto criado para uso especifico em sensores e atuadores que operam nas bandas n\~ao licenciadas das frequ\^encias 433MHz, 868MHz e 915MHz. Assim como o 6LoWPAN, ele foi idealizado para uso em equipamentos com baixo consumo de energia, por\'em seus criadores se preocuparam na constru\c{c}\~ao de um protocolo completo, que dispusesse de longo alcance (at\'e 2 km), tivesse uma lat\^encia de conex\~ao reduzida nos dispositivos em movimento, fosse uma pilha de protocolos pequena, suportasse chaves de criptografia AES com 128-bit, atingindo taxas de transfer\^encia de dados adequadas aos dispositivos de IoT (at\'e  167 kbit/s).
-\subsection{MQTT}
+\paragraph{MQTT}
 
-\section{Plataformas}
-\subsection{Thingspeak}
+\subsection{Plataformas}
+\paragraph{Thingspeak}
 	Plataforma Web open-sourse seguindo a linha da "Web das Coisas", onde "coisas" se conectam \`a APIs remotas utilizando a internet e seus protocolos. Ele funciona de forma semelhante a um Middleware baseado na nuvem onde end-points s\~ao criados para serem utilizados por webnodes (n\'os de sensores) para remeter solicita\c{c}\~oes, enviar dados para serem armazenados e solicitar a recupera\c{c}\~ao de informa\c{c}\~oes utilizando o protocolo HTTP via Internet. O foco principal do Thingspeak \'e utilizar aplicar as seguintes atividades de minera\c{c}\~ao de dados na Internet das Coisas:
 	
 	\begin{itemize}
@@ -47,11 +49,11 @@ Protocolo de redes sem fio de c\'odigo aberto criado para uso especifico em sens
 	
 	O Thingspeak integrado aos recursos do MatLab se mostra uma ferramenta muito adequada para criar fluxos de notifica\c{c}\~ao e controle automatizado a partir da minera\c{c}\~ao dos dados provenientes de uma rede de sensores conectados \`a Web que exija c\'alculos matem\'aticos no processamento, mantendo um alto rendimento. H\'a ainda a possibilidade de utiliza\c{c}\~ao dos recursos de processamento e a\c{c}\~ao do Thingspeak, para cria\c{c}\~ao de regras de intelig\^encia computacional para uso em projetos voltados \`a Intelig\^encia Ambiental, Intelig\^encia Artificial e SWoT. 
 
-%\subsection{instructables}
-%\subsection{code project}
-%\subsection{channel9}
+%\paragraph{instructables}
+%\paragraph{code project}
+%\paragraph{channel9}
 
-\subsection{Pachube/Xively}
+\paragraph{Pachube/Xively}
 	Inicialmente criada com o objetivo de se tornar uma rede social para a Internet das Coisas, dando suporte para comunidades virtuais criarem uma infraestrutura de dados compartilhados, foi adquirida pela empresa LogMeIn em 2011, passando a ser um servi\c{c}o de plataforma para a Internet das Coisas, com objetivo de disponibilizar uma plataforma onde voc\^e pode criar produtos conectados que s\~ao operados (Figura~\ref{fig:arqxively}), controlados e automatizados de forma simples utilizando a internet e viabilizando a identifica\c{c}\~ao de insights dos usu\'arios a partir da an\'alise dos dados.
 	
 	\begin{figure}[ht]
@@ -80,7 +82,7 @@ Protocolo de redes sem fio de c\'odigo aberto criado para uso especifico em sens
 		\item[Carro] Identificaria a hora de uma revis\~ao, verifique a agenda do cliente e cruze com as datas dispon\'iveis na concession\'aria, agendando o melhor hor\'ario, informando a manuten\c{c}\~ao necess\'aria e o custo.
 	\end{labeling}
 
-\subsection{IFTTT}
+\paragraph{IFTTT}
 	A concep\c{c}\~ao essencial dessa plataforma \'e automatizar "coisas" utilizando condi\c{c}\~oes(Figura~\ref{fig:ifttt}), assim como o significado de seu acr\^onimo diz: "Se acontecer isso, ent\~ao fa\c{c}a aquilo" (If This, Then That). Ele \'e tanto um website como um app mobile lan\c{c}ado em 2010 com o slogan "Coloque a internet para trabalhar para voc\^e" e com objetivo de automatizar tudo o que for poss\'ivel, desde tarefas nos seus apps e sites favoritos at\'e gadgets e dispositivos inteligentes. A plataforma possui 4 elementos.
 	
 	\begin{labeling}{Receitas/Applets}

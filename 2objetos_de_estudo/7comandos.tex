@@ -1,0 +1,71 @@
+\section{Controlando equipamentos}
+The pins on the Arduino can be configured as either inputs or outputs. This document explains the functioning of the pins in those modes. While the title of this document refers to digital pins, it is important to note that vast majority of Arduino (Atmega) analog pins, may be configured, and used, in exactly the same manner as digital pins.
+
+	
+\subsection{Portas Digitais}
+
+\paragraph{Input}
+Pins default to inputs, so they don't need to be explicitly declared as inputs with pinMode() when you're using them as inputs. Pins configured this way are said to be in a high-impedance state. Input pins make extremely small demands on the circuit that they are sampling, equivalent to a series resistor of 100 megohm in front of the pin. This means that it takes very little current to move the input pin from one state to another.
+
+This also means however, that pins configured as INPUT with nothing connected to them, or with wires connected to them that are not connected to other circuits, will report seemingly random changes in pin state, picking up electrical noise from the environment, or capacitively coupling the state of a nearby pin.
+
+\paragraph{Pullup}
+Often it is useful to steer an input pin to a known state if no input is present. This can be done by adding a pullup resistor (to +5V), or a pulldown resistor (resistor to ground) on the input. A 10K resistor is a good value for a pullup or pulldown resistor.
+
+Utilizando o modo de operação INPUT_PULLUP 
+
+There are 20K pullup resistors built into the Atmega chip that can be accessed from software. These built-in pullup resistors are accessed by setting the pinMode() as INPUT_PULLUP. This effectively inverts the behavior of the INPUT mode, where HIGH means the sensor is off, and LOW means the sensor is on.
+
+
+\paragraph{Output}
+Pins configured as OUTPUT with pinMode() are said to be in a low-impedance state. This means that they can provide a substantial amount of current to other circuits. Atmega pins can source (provide positive current) or sink (provide negative current) up to 40 mA (milliamps) of current to other devices/circuits. This is enough current to brightly light up an LED (don't forget the series resistor), or run many sensors, for example, but not enough current to run most relays, solenoids, or motors.
+
+
+
+\subsection{Portas Analógicas}
+The Atmega controllers used for the Arduino contain an onboard 6 channel analog-to-digital (A/D) converter. The converter has 10 bit resolution, returning integers from 0 to 1023. While the main function of the analog pins for most Arduino users is to read analog sensors, the analog pins also have all the functionality of general purpose input/output (GPIO) pins (the same as digital pins 0 - 13).
+
+Consequently, if a user needs more general purpose input output pins, and all the analog pins are not in use, the analog pins may be used for GPIO.
+
+\paragraph{Pin mapping}
+The analog pins can be used identically to the digital pins, using the aliases A0 (for analog input 0), A1, etc. For example, the code would look like this to set analog pin 0 to an output, and to set it HIGH. Analog pins also have pullup resistors, which work identically to pullup resistors on the digital pins. They are enabled by issuing the command mode INPUT_PULLUP.
+	 
+\paragraph{Detalhes e Caveats}
+The analogRead command will not work correctly if a pin has been previously set to an output, so if this is the case, set it back to an input before using analogRead. Similarly if the pin has been set to HIGH as an output, the pullup resistor will be set, when switched back to an input.
+
+
+\subsection{Portas PWM}
+Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED.
+
+In the graphic below, the green lines represent a regular time period. This duration or period is the inverse of the PWM frequency. In other words, with Arduino's PWM frequency at about 500Hz, the green lines would measure 2 milliseconds each. A call to analogWrite() is on a scale of 0 - 255, such that analogWrite(255) requests a 100% duty cycle (always on), and analogWrite(127) is a 50% duty cycle (on half the time) for example.
+	 
+\subsection{Modos de Operação e mensagens de comando na plataforma}
+
+
+PIN_MODE_INPUT          0x00 // same as INPUT defined in Arduino.h
+PIN_MODE_OUTPUT         0x01 // same as OUTPUT defined in Arduino.h
+PIN_MODE_ANALOG         0x02 // analog pin in analogInput mode
+PIN_MODE_PWM            0x03 // digital pin in PWM output mode
+
+PIN_MODE_SERVO          0x04 // digital pin in Servo output mode
+PIN_MODE_SHIFT          0x05 // shiftIn/shiftOut mode
+PIN_MODE_I2C            0x06 // pin included in I2C setup
+PIN_MODE_ONEWIRE        0x07 // pin configured for 1-wire
+PIN_MODE_STEPPER        0x08 // pin configured for stepper motor
+PIN_MODE_ENCODER        0x09 // pin configured for rotary encoders
+PIN_MODE_SERIAL         0x0A // pin configured for serial communication
+PIN_MODE_PULLUP         0x0B // enable internal pull-up resistor for pin
+PIN_MODE_IGNORE         0x7F // pin configured to be ignored by digitalWrite and capabilityResponse
+
+
+STRING_DATA             0x72 // 114 - a string message with 14-bits per char
+STRING_ERROR            0x73 // 115 - a string message with 14-bits per char
+LOAD_DATA               0x74 // 116 - receive a json object with input vals --> DOUT, PD_SCK, AVERAGE, READINGS, SCALE
+DIGITAL_MESSAGE         0x90 // send data for a digital pin
+ANALOG_MESSAGE          0xE0 // send data for an analog pin (or PWM)
+REPORT_ANALOG           0xC0 // enable analog input by pin #
+REPORT_DIGITAL          0xD0 // enable digital input by port pair
+REPORT_STATE            0xD0 // enable digital input by port pair
+SET_PIN_MODE            0xF4 // 244 - set a pin to INPUT/OUTPUT/PWM/etc
+SET_DIGITAL_PIN_VALUE   0xF5 // 245 - set value of an individual digital pin
+SYSTEM_RESET            0xFF // 255 - reset from MIDI
